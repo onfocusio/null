@@ -13,6 +13,7 @@ var (
 	timeString3   = "2018-08-19T01:02:03Z"
 	timeJSON      = []byte(`"` + timeString1 + `"`)
 	nullTimeJSON  = []byte(`null`)
+	natTimeJSON   = []byte(`"NaT"`)
 	timeValue1, _ = time.Parse(time.RFC3339, timeString1)
 	timeValue2, _ = time.Parse(time.RFC3339, timeString2)
 	timeValue3, _ = time.Parse(time.RFC3339, timeString3)
@@ -31,6 +32,11 @@ func TestUnmarshalTimeJSON(t *testing.T) {
 	err = json.Unmarshal(nullTimeJSON, &null)
 	maybePanic(err)
 	assertNullTime(t, null, "null time json")
+
+	var nat Time
+	err = json.Unmarshal(natTimeJSON, &nat)
+	maybePanic(err)
+	assertNullTime(t, nat, "nat time json")
 
 	var fromObject Time
 	err = json.Unmarshal(timeObject, &fromObject)
