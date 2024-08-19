@@ -10,6 +10,8 @@ import (
 
 // Time is a nullable time.Time. It supports SQL and JSON serialization.
 // It will marshal to null if null.
+// Handles Hubspot "NaT" notation for null time.
+// Exact same signature as null.Time otherwise.
 type Time struct {
 	sql.NullTime
 }
