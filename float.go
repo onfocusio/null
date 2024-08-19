@@ -8,7 +8,7 @@ import (
 	"reflect"
 	"strconv"
 
-	"github.com/guregu/null/internal"
+	"github.com/onfocusio/null/internal"
 )
 
 // Float is a nullable float64.
