@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"strconv"
 
-	"github.com/guregu/null/internal"
+	"github.com/onfocusio/null/internal"
 )
 
 // Int32 is an nullable int32.

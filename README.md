@@ -103,14 +103,8 @@ This package isn't intended to be a catch-all data-wrangling package. It is esse
 
 ### Package history
 
-#### v5
-- Now a Go module under the path `github.com/guregu/null/v5`
-- Added missing types from `database/sql`: `Int32, Int16, Byte`
-- Added generic `Value[T]` embedding `sql.Null[T]`
-
-#### v4
-- Available at `gopkg.in/guregu/null.v4`
-- Unmarshaling from JSON `sql.NullXXX` JSON objects (e.g. `{"Int64": 123, "Valid": true}`) is no longer supported. It's unlikely many people used this, but if you need it, use v3.
+This package is a simple fork of [this repository](https://github.com/guregu/null).
+Updated to v5 of the guregu package on August 2024.
 
 ### Bugs
 `json`'s `",omitempty"` struct tag does not work correctly right now. It will never omit a null or empty String. This might be [fixed eventually](https://github.com/golang/go/issues/11939).

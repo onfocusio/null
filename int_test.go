@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/guregu/null/internal"
+	"github.com/onfocusio/null/internal"
 )
 
 var (

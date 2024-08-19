@@ -1,7 +1,6 @@
 package null
 
 import (
-	"bytes"
 	"encoding/json"
 	"fmt"
 
@@ -37,7 +36,7 @@ func (i Interval) ValueOrZero() pgtype.Interval {
 
 // UnmarshalJSON implements json.Unmarshaler.
 func (i *Interval) UnmarshalJSON(data []byte) error {
-	if bytes.Equal(data, nullBytes) {
+	if len(data) > 0 && data[0] == 'n' {
 		i.Status = pgtype.Null
 		return nil
 	}
