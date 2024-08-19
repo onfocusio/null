@@ -1,6 +1,7 @@
 package null
 
 import (
+	"bytes"
 	"database/sql"
 	"database/sql/driver"
 	"encoding/json"
@@ -67,7 +68,7 @@ func (t Time) MarshalJSON() ([]byte, error) {
 // UnmarshalJSON implements json.Unmarshaler.
 // It supports string and null input.
 func (t *Time) UnmarshalJSON(data []byte) error {
-	if len(data) > 0 && data[0] == 'n' {
+	if len(data) > 0 && data[0] == 'n' || bytes.Equal(data, []byte("NaT")) {{
 		t.Valid = false
 		return nil
 	}
