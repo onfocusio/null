@@ -17,7 +17,7 @@ Types in `zero` are treated like zero values in Go: blank string input will prod
 
 ## null package
 
-`import "github.com/guregu/null/v5"`
+`import "github.com/onfocusio/null"`
 
 #### null.String
 Nullable string.
@@ -59,7 +59,7 @@ Will marshal to JSON null if SQL source data is null. Does not implement `encodi
 
 ## zero package
 
-`import "github.com/guregu/null/v5/zero"`
+`import "github.com/onfocusio/null/zero"`
 
 #### zero.String
 Nullable string.
