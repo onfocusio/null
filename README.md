@@ -26,11 +26,6 @@ Nullable int64.
 
 Marshals to JSON null if SQL source data is null. Zero input will not produce a null Int.
 
-#### null.Int16
-Nullable int16. 
-
-Marshals to JSON null if SQL source data is null. Zero input will not produce a null Int16.
-
 #### null.Float
 Nullable float64. 
 
@@ -44,10 +39,6 @@ Marshals to JSON null if SQL source data is null. False input will not produce a
 #### null.Time
 
 Marshals to JSON null if SQL source data is null. Zero input will not produce a null Time.
-
-#### null.Interval
-
-Marshals a `pgtype.Interval` struct to a string representation of it. Marshals to JSON null if the Status is Null or Undefined.
 
 ### zero package
 
